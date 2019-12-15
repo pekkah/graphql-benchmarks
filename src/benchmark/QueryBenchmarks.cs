@@ -10,6 +10,7 @@ namespace benchmark
 {
     [SimpleJob(RuntimeMoniker.NetCoreApp31)]
     [MemoryDiagnoser]
+    [MarkdownExporterAttribute.GitHub]
     public class QueryBenchmarks
     {
         public static readonly string Query = @"{ hero { id name friend { name } } }";

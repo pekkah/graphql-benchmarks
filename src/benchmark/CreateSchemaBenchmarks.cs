@@ -7,6 +7,7 @@ namespace benchmark
 {
     [SimpleJob(RuntimeMoniker.NetCoreApp31)]
     [MemoryDiagnoser]
+    [MarkdownExporterAttribute.GitHub]
     public class CreateSchemaBenchmarks
     {
         private GraphQLDotnetRunner _gqldn;
