@@ -55,12 +55,7 @@ namespace benchmark.tankagraphql
     {
         public CharacterResolvers()
         {
-            Add("name", context =>
-            {
-                if (context.ObjectValue is Droid droid) return ResolveSync.As(droid.Name);
-
-                return ResolveSync.As(null);
-            });
+            Add("name", Resolve.PropertyOf<Character>(c => c.Name));
         }
     }
 
@@ -71,13 +66,16 @@ namespace benchmark.tankagraphql
             Add("id", Resolve.PropertyOf<Droid>(d => d.Id));
             Add("name", Resolve.PropertyOf<Droid>(d => d.Name));
             Add("friend", context => ResolveSync.As(
-                context.ExecutionContext.Schema.GetNamedType<ObjectType>("Droid"),
-                new Droid
+                new Character
                 {
-                    Id = "2",
                     Name = "C3-PO"
                 }));
         }
+    }
+
+    public class Character
+    {
+        public string Name { get; set; }
     }
 
     public class Droid
