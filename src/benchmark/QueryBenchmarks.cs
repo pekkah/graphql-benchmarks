@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using benchmark.graphqldotnet;
 using benchmark.tankagraphql;
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Jobs;
+using BenchmarkDotNet.Order;
 
 namespace benchmark
 {
-    [SimpleJob(RuntimeMoniker.NetCoreApp31)]
+    [Orderer(SummaryOrderPolicy.FastestToSlowest)]
     [MemoryDiagnoser]
     [MarkdownExporterAttribute.GitHub]
     public class QueryBenchmarks
@@ -28,7 +28,7 @@ namespace benchmark
             _tgqlCreated.CreateSchema();
         }
 
-        [Benchmark]
+        [Benchmark(Baseline = true)]
         public async Task graphql_dotnet_query()
         {
             var result = await _gqldnCreated.Execute(Query);

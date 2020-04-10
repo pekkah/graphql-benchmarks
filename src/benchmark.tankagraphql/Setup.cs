@@ -15,7 +15,7 @@ namespace benchmark.tankagraphql
 
         public TankaGraphQLRunner()
         {
-            _sdl = File.ReadAllText("schema.graphql");
+            _sdl = File.ReadAllText("tanka/schema.graphql");
         }
 
         public void CreateSchema()

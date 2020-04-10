@@ -9,13 +9,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="schema.graphql">
+    <Content Include="graphqldotnet\schema.graphql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL" Version="3.0.0-preview-1352" />
+    <PackageReference Include="GraphQL" Version="3.0.0-preview-1490" />
   </ItemGroup>
 
 </Project>

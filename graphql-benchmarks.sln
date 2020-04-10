@@ -5,13 +5,14 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "benchmark", "src\benchmark\benchmark.csproj", "{F11A6182-9CAB-4DFD-BB55-49C7375D61D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "benchmark.graphqldotnet", "src\benchmark.graphqldotnet\benchmark.graphqldotnet.csproj", "{303A4172-092E-4E23-BEA5-16E184E8F139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "benchmark.graphqldotnet", "src\benchmark.graphqldotnet\benchmark.graphqldotnet.csproj", "{303A4172-092E-4E23-BEA5-16E184E8F139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "benchmark.tankagraphql", "src\benchmark.tankagraphql\benchmark.tankagraphql.csproj", "{5A0BEBCB-2927-44E3-B528-B0DB8F59CB26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "benchmark.tankagraphql", "src\benchmark.tankagraphql\benchmark.tankagraphql.csproj", "{5A0BEBCB-2927-44E3-B528-B0DB8F59CB26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15C2AAC5-9FD5-4059-941F-65706F746D29}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global

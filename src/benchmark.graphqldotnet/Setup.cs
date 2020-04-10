@@ -15,7 +15,7 @@ namespace benchmark.graphqldotnet
         public GraphQLDotnetRunner()
         {
             _executor = new DocumentExecuter();
-            _sdl = File.ReadAllText("schema.graphql");
+            _sdl = File.ReadAllText("graphqldotnet/schema.graphql");
         }
 
         public void CreateSchema()
